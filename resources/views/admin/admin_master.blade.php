@@ -4,12 +4,15 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Dashboard | Upcube - Admin & Dashboard Template</title>
+    <title>Escritorio | Servicio Médico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Themesdesign" name="author" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
+
+    <!-- Select2 -->
+    <link href="{{ asset('backend/assets/libs/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- jquery.vectormap css -->
     <link href="{{ asset('backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
@@ -68,9 +71,6 @@
 
 <!-- /Right-bar -->
 
-<!-- Right bar overlay-->
-<div class="rightbar-overlay"></div>
-
 <!-- JAVASCRIPT -->
 <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -78,9 +78,8 @@
 <script src="{{ asset('backend/assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ asset('backend/assets/libs/node-waves/waves.min.js') }}"></script>
 
-
-<!-- apexcharts -->
-<script src="{{ asset('backend/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+<!-- Select2 -->
+<script src="{{ asset('backend/assets/libs/select2/js/select2.min.js') }}"></script>
 
 <!-- jquery.vectormap map -->
 <script src="{{ asset('backend/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
@@ -124,6 +123,46 @@
     }
     @endif
 </script>
+
+<script>
+    $('#principalTable').DataTable({
+        "language": {
+            "emptyTable":     "No hay datos disponibles",
+            "info":           "Mostrando _START_ a _END_ de _TOTAL_ registros",
+            "infoEmpty":      "Mostrando 0 a 0 de 0 registros",
+            "infoFiltered":   "(filtrado de _MAX_ registros totales)",
+            "infoPostFix":    "",
+            "thousands":      ".",
+            "lengthMenu":     "Mostrar _MENU_ registros",
+            "loadingRecords": "Cargando...",
+            "processing":     "",
+            "search":         "Buscar:",
+            "zeroRecords":    "No se encontraron resultados",
+            "paginate": {
+                "first":      "Primero",
+                "last":       "Último",
+                "next":       "Próximo",
+                "previous":   "Previo"
+            },
+        }
+    });
+</script>
+
+<script>
+    $( "#f_nacimiento" ).on( "change", function() {
+        var fecha = $('#f_nacimiento').val();
+        date = new Date(fecha);
+        var today = new Date();
+        var age = Math.floor((today-date) / (365.25 * 24 * 60 * 60 * 1000));
+        $('#edad').val(age);
+    } );
+
+    $(".select2").select2({
+        placeholder: 'Selecciona un item'
+    });
+</script>
+
+
 </body>
 
 </html>
