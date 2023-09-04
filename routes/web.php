@@ -5,6 +5,7 @@ use App\Http\Controllers\CitaController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,7 +52,10 @@ Route::controller(CitaController::class)->group(function () {
 
 
 Route::get('/dashboard', function () {
-    return view('admin.index');
+    $pacientes = DB::table('pacientes')->count();
+    $citas = DB::table('citas')->count();
+
+    return view('admin.index', compact('pacientes', 'citas'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

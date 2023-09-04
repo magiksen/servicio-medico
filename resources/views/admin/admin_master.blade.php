@@ -6,8 +6,9 @@
     <meta charset="utf-8" />
     <title>Escritorio | Servicio Médico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesdesign" name="author" />
+    <meta content="Servicio Médico" name="description" />
+    <meta content="magiksen" name="author" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.ico') }}">
 
@@ -33,6 +34,7 @@
     <!-- Toastr -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
+    {{--@vite(['resources/css/app.css', 'resources/js/app.js'])--}}
 </head>
 
 <body data-topbar="dark">

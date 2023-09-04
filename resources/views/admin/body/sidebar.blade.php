@@ -18,13 +18,13 @@
 
                 <li>
                     <a href="{{ route('dashboard') }}" class="waves-effect">
-                        <i class="ri-dashboard-line"></i>
+                        <i class="ri-home-3-fill"></i>
                         <span>Inicio</span>
                     </a>
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="ri-hospital-fill"></i>
                         <span>Pacientes</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -34,7 +34,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="ri-hospital-fill"></i>
                         <span>Doctores</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
@@ -44,7 +44,7 @@
                 </li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
+                        <i class="ri-folder-user-fill"></i>
                         <span>Citas</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">

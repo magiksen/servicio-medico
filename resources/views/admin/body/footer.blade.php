@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <script>document.write(new Date().getFullYear())</script> © Magiksen.
+                <script>document.write(new Date().getFullYear())</script> © Servicio Médico.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-end d-none d-sm-block">
-                    Creado  <i class="mdi mdi-heart text-danger"></i> por magiksen
+                    Creado  <i class="mdi mdi-heart text-danger"></i> por AZ
                 </div>
             </div>
         </div>
